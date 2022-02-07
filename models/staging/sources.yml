@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: public
+    tables:
+      - name: orders
+        description: This is a replica of the Postgres database
+        columns:
+          - name: id
+            description: Primary key of the orders table
+            tests:
+              - unique
+              - not null
+      - name: order_items
+        description: This table contains informations about items of orders
+      - name: employees
+        description: This table contains informations about employees
+      - name: company_branches
+        description: This table contains informations about company branches
